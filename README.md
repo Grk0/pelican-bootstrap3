@@ -1,4 +1,15 @@
-# pelican-bootstrap3
+# pelican-bootstrap3 optimized for my personal homepage
+
+This is a version of the pelican-bootstrap3 theme optimized for my personal
+homepage. I don't recommend using this repository directly for other web pages,
+pull the upstream
+[pelican-bootstrap3 repository](https://github.com/DandyDev/pelican-bootstrap3)
+or the official
+[pelican-themes repo](https://github.com/getpelican/pelican-themes) instead.
+
+Below follows the original documentation for pelican-bootstrap3.
+
+---------------
 
 This is a Bootstrap 3 theme for Pelican. It's fully responsive. Pelican-bootstrap3 is compatible with Pelican 3.3.0 and 
 higher. I will try to regularly update this theme with new features and newer versions of Bootstrap & Bootswatch.
