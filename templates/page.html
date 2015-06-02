@@ -55,7 +55,7 @@
             </a>
         {% endif %}
         <div class="entry-content">
-            {{ page.content }}
+            <div class="inner-content">{{ page.content }}</div>
             {% if page.comments == 'enabled' %}
                 {% include 'includes/comments.html' %}
             {% endif %}
