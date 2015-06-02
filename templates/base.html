@@ -144,8 +144,10 @@
                 </form></span>
               </li>
             {% endif %}
-              <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
+            {% if DISPLAY_DDG_SEARCH %}
+              {% include 'includes/ddg-search.html' %}</span>
+            {% endif %}
         </div>
         <!-- /.navbar-collapse -->
     </div>
