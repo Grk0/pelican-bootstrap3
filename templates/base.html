@@ -204,5 +204,8 @@
 {% include 'includes/piwik.html' %}
 
 {% block scripts %}{% endblock %}
+{% if CUSTOM_JS %}
+    <script src="{{ SITEURL }}/{{ CUSTOM_JS }}"></script>
+{% endif %}
 </body>
 </html>
