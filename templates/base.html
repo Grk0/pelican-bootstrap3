@@ -118,9 +118,6 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
-                {% endfor %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
                          <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
@@ -137,6 +134,12 @@
                 {% endif %}
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                {% for title, link in MENUITEMS %}
+                    <li><a href="{{ link }}">{{ title }}</a></li>
+                {% endfor %}
+                {% if DISPLAY_DDG_SEARCH %}
+                    <li>{% include 'includes/ddg-search.html' %}</li>
+                {% endif %}
             {% if 'tipue_search' in PLUGINS %}
               <li><span>
                 <form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
@@ -145,9 +148,6 @@
               </li>
             {% endif %}
             </ul>
-            {% if DISPLAY_DDG_SEARCH %}
-              {% include 'includes/ddg-search.html' %}
-            {% endif %}
         </div>
         <!-- /.navbar-collapse -->
     </div>
