@@ -1,0 +1,23 @@
+{% if ONSITE_COMMENTS %}
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div ng-app="CommentsApp" ng-strict-di
+             class="comment-config"
+             comment-path="{{ ONSITE_COMMENT_PATH }}"
+             comment-api="{{ ONSITE_COMMENT_API }}"
+             comment-postname="{{ article.source_path.split('/')[-1] }}">
+            <ng-include src="'{{ ONSITE_COMMENT_PATH }}/comments.tmpl'"></ng-include>
+        </div>
+        <script type="text/javascript" src="{{ ONSITE_COMMENT_PATH }}/angular.js"></script>
+        <script type="text/javascript" src="{{ ONSITE_COMMENT_PATH }}/angular-resource.js"></script>
+        <script type="text/javascript" src="{{ ONSITE_COMMENT_PATH }}/angular-sanitize.js"></script>
+        <script type="text/javascript" src="{{ ONSITE_COMMENT_PATH }}/angular-animate.js"></script>
+        <script type="text/javascript" src="{{ ONSITE_COMMENT_PATH }}/identicon.js"></script>
+        <script type="text/javascript" src="{{ ONSITE_COMMENT_PATH }}/commonmark.js"></script>
+        <script type="text/javascript" src="{{ ONSITE_COMMENT_PATH }}/comments.js"></script>
+        <link rel="stylesheet" href="{{ ONSITE_COMMENT_PATH }}/style.css">
+        <noscript>Please enable JavaScript to view the comments.</noscript>
+    </section>
+{% endif %}
