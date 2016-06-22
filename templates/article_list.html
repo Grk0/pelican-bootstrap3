@@ -4,15 +4,15 @@
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <article>
                 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-                <div class="summary">
-                    <div class="inner-content">{{ article.summary }}</div>
+                <div class="entry-content">
+                    <div class="inner-content">{{ article.content }}</div>
                     {% include 'includes/comment_count.html' %}
+                    {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
+                        <div class="well well-sm">
+                            {% include "includes/article_info.html" %}
+                        </div>
+                    {% endif %}
                 </div>
-                {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
-                    <div class="well well-sm">
-                        {% include "includes/article_info.html" %}
-                    </div>
-                {% endif %}
             </article>
             <hr/>
         {% endfor %}

@@ -40,4 +40,8 @@
     {% include 'includes/taglist.html' %}
     {% import 'includes/translations.html' as translations with context %}
     {{ translations.translations_for(article) }}
+
+    {% if SHOW_SOCIAL %}
+    {% include 'includes/social.html' %}
+    {% endif %}
 </footer><!-- /.post-info -->

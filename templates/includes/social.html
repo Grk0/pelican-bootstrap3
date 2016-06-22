@@ -1,0 +1,15 @@
+<div class="share">
+<span class="label label-default">share</span>
+<a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{ article.title|striptags|escape }}&amp;url={{ SITEURL }}/{{ article.url }}&amp;hashtags={% for tag in article.tags %}{{ TWITTER_HASHTAGS.get(tag.name, tag)|escape }}{% if not loop.last %},{% endif %}{% endfor %}" target="_blank">
+    <span class="hidden">Twitter</span>
+</a>
+<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}/{{ article.url }}" target="_blank">
+    <span class="hidden">Facebook</span>
+</a>
+<a class="icon-google-plus" href="https://plus.google.com/share?url={{ SITEURL }}/{{ article.url }}" target="_blank">
+    <span class="hidden">Google+</span>
+</a>
+<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ SITEURL }}/{{ article.url }}&amp;title={{ article.title|striptags|escape }}&amp;summary={{ article.summary|striptags|escape }}&amp;source=greek0.net" target="_blank">
+    <span class="hidden">LinkedIn</span>
+</a>
+</div>
